@@ -1,0 +1,47 @@
+# Node.js / Next.js
+node_modules/
+.next/
+
+# Ignore environment variable files
+.env
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+error_log
+Thumbs.db
+verdor
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+*.log
+
+# Mac system files
+.DS_Store
+.DS_Store?
+.Spotlight-V100
+.Trashes
+._*
+
+# Logs
+logs
+*.log
+
+# Misc
+.idea/
+.vscode/
+
+# Wordpress
+wp-config.php
+wp-content/uploads/
+wp-content/cache/
+wp-content/backup*/
+wp-content/backups/
+wp-content/upgrade/
+wp-admin/
+wp-includes/

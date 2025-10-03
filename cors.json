@@ -1,0 +1,8 @@
+[
+  {
+    "origin": ["https://net1io.com", "https://www.net1io.com"],
+    "method": ["GET"],
+    "responseHeader": ["Content-Type"],
+    "maxAgeSeconds": 3600
+  }
+]
