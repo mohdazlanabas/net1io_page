@@ -1,5 +1,0 @@
-# Include only the build directory and app.yaml
-*
-!build/
-!build/**
-!app.yaml
