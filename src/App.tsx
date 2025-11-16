@@ -91,9 +91,11 @@ export default function App() {
       <section className="py-12 md:py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8 md:mb-16">
-            <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm md:text-lg">
-              Boutique Excellence
-            </Badge>
+            <div className="flex justify-center mb-6 md:mb-8">
+              <Badge variant="secondary" className="px-6 py-3 text-sm md:text-lg">
+                Boutique Excellence
+              </Badge>
+            </div>
             <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">Integrated Organizational Transformation</h2>
             <p className="text-base md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
               Net1io specializes in the seamless integration of organizational components across technical,
@@ -102,7 +104,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-0">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-16">
             <Card className="border-2 hover:shadow-lg transition-shadow">
               <CardHeader className="pb-6">
                 <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
@@ -207,9 +209,11 @@ export default function App() {
             {/* Team Credentials */}
             <div>
               <div className="mb-6 md:mb-8">
-                <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm md:text-base">
-                  World-Class Team
-                </Badge>
+                <div className="flex justify-center lg:justify-start mb-6">
+                  <Badge variant="secondary" className="px-6 py-3 text-sm md:text-base">
+                    World-Class Team
+                  </Badge>
+                </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Distinguished Academic & Professional Pedigree</h3>
                 <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8">
                   Our team comprises elite Engineering and Business graduates from globally renowned
@@ -231,9 +235,11 @@ export default function App() {
             {/* Sectors Served */}
             <div>
               <div className="mb-6 md:mb-8">
-                <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm md:text-base">
-                  Industry Focus
-                </Badge>
+                <div className="flex justify-center lg:justify-start mb-6">
+                  <Badge variant="secondary" className="px-6 py-3 text-sm md:text-base">
+                    Industry Focus
+                  </Badge>
+                </div>
                 <h3 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6">Sector Expertise & Market Leadership</h3>
                 <p className="text-base md:text-lg text-muted-foreground mb-6 md:mb-8">
                   Deep domain expertise across critical industry verticals, with proven success
@@ -270,9 +276,11 @@ export default function App() {
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8 md:mb-16">
-            <Badge variant="secondary" className="mb-4 px-4 py-2 text-sm md:text-lg">
-              Trusted Partnerships
-            </Badge>
+            <div className="flex justify-center mb-6 md:mb-8">
+              <Badge variant="secondary" className="px-6 py-3 text-sm md:text-lg">
+                Trusted Partnerships
+              </Badge>
+            </div>
             <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6">Our Valued Clients</h2>
             <p className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto">
               Proud to serve industry leaders across South East Asia, delivering excellence
@@ -280,7 +288,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-5">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
             {[
               { name: 'Petronas', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/petronas_paundo.jpg' },
               { name: 'Gas Malaysia', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/gasm_qapzj0.png' },
@@ -303,7 +311,7 @@ export default function App() {
             ].map((client, index) => (
               <div
                 key={index}
-                className="group relative flex items-center justify-center p-3 md:p-4 bg-white rounded-lg border hover:border-primary transition-all duration-300 hover:shadow-md h-20 md:h-24"
+                className="group relative flex items-center justify-center p-3 md:p-5 bg-white rounded-lg border hover:border-primary transition-all duration-300 hover:shadow-md h-20 md:h-28 lg:h-32"
               >
                 <ImageWithFallback
                   src={client.url}
@@ -314,8 +322,8 @@ export default function App() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
-            <p className="text-lg text-muted-foreground">
+          <div className="mt-8 md:mt-12 text-center">
+            <p className="text-base md:text-lg text-muted-foreground">
               <br />
               Building lasting relationships through exceptional delivery and measurable results
             </p>
