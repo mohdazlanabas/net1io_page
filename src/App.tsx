@@ -45,7 +45,7 @@ export default function App() {
       <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <ImageWithFallback 
-            src="https://res.cloudinary.com/dpp2n0jkk/image/upload/v1758680695/rex8_team_a1chsy.jpg"
+            src="https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763008918/net1io_logo_f245yi.png"
             alt="Net1io team"
             className="w-full h-full object-cover"
           />
@@ -262,6 +262,63 @@ export default function App() {
                 </div>
               </Card>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Client Logos */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <Badge variant="secondary" className="mb-4 px-4 py-2 text-lg">
+              Trusted Partnerships
+            </Badge>
+            <h2 className="text-4xl font-bold mb-6">Our Valued Clients</h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Proud to serve industry leaders across South East Asia, delivering excellence
+              through every engagement from Fortune 500 enterprises to dynamic SMEs.
+            </p>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
+            {[
+              { name: 'Petronas', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/petronas_paundo.jpg' },
+              { name: 'Gas Malaysia', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/gasm_qapzj0.png' },
+              { name: 'Bechtel', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/bechtel_kiwav3.png' },
+              { name: 'GE', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/ge_reh0iw.png' },
+              { name: 'Eaton', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/eaton_rhykj9.png' },
+              { name: 'Proton', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/proton_wrahdf.png' },
+              { name: '3M', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276077/threem_iw1pce.png' },
+              { name: 'AmBank', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/ambank_mp6dpf.png' },
+              { name: 'Telkomsel', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/telkomsel_opry4g.jpg' },
+              { name: 'UEM Group', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/uemg_ofsoe4.png' },
+              { name: 'Transwater', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276077/transwater_wjaqtf.png' },
+              { name: 'KOC', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/koc_ytghs4.jpg' },
+              { name: 'Operon', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/operon_lxj6cv.jpg' },
+              { name: 'Iskandar', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/iskandar_a8vk5t.jpg' },
+              { name: 'MPC', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/mpc_ok6gfa.png' },
+              { name: 'LSI', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/lsi_pdttka.png' },
+              { name: 'Greenviro', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/green_gi6whw.png' },
+              { name: 'Shell', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/shell_jjtkcv.jpg' },
+            ].map((client, index) => (
+              <div
+                key={index}
+                className="group relative flex items-center justify-center px-5 py-0 bg-white rounded-lg border hover:border-primary transition-all duration-300 hover:shadow-md w-224 md:w-288"
+              >
+                <ImageWithFallback
+                  src={client.url}
+                  alt={`${client.name} logo`}
+                  className="max-w-full max-h-full object-contain grayscale hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-lg text-muted-foreground">
+              <br />
+              Building lasting relationships through exceptional delivery and measurable results
+            </p>
           </div>
         </div>
       </section>
