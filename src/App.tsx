@@ -91,8 +91,8 @@ export default function App() {
       <section className="py-12 md:py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8 md:mb-16">
-            <div className="flex justify-center mb-6 md:mb-8">
-              <Badge variant="secondary" className="px-6 py-3 text-sm md:text-lg">
+            <div className="flex justify-center mb-4 md:mb-6">
+              <Badge variant="secondary" className="px-4 py-2 md:px-6 md:py-3 text-sm md:text-lg">
                 Boutique Excellence
               </Badge>
             </div>
@@ -209,8 +209,8 @@ export default function App() {
             {/* Team Credentials */}
             <div>
               <div className="mb-6 md:mb-8">
-                <div className="flex justify-center lg:justify-start mb-6">
-                  <Badge variant="secondary" className="px-6 py-3 text-sm md:text-base">
+                <div className="flex justify-center lg:justify-start mb-4 md:mb-6">
+                  <Badge variant="secondary" className="px-4 py-2 md:px-6 md:py-3 text-sm md:text-base">
                     World-Class Team
                   </Badge>
                 </div>
@@ -235,8 +235,8 @@ export default function App() {
             {/* Sectors Served */}
             <div>
               <div className="mb-6 md:mb-8">
-                <div className="flex justify-center lg:justify-start mb-6">
-                  <Badge variant="secondary" className="px-6 py-3 text-sm md:text-base">
+                <div className="flex justify-center lg:justify-start mb-4 md:mb-6">
+                  <Badge variant="secondary" className="px-4 py-2 md:px-6 md:py-3 text-sm md:text-base">
                     Industry Focus
                   </Badge>
                 </div>
@@ -276,8 +276,8 @@ export default function App() {
       <section className="py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-8 md:mb-16">
-            <div className="flex justify-center mb-6 md:mb-8">
-              <Badge variant="secondary" className="px-6 py-3 text-sm md:text-lg">
+            <div className="flex justify-center mb-4 md:mb-6">
+              <Badge variant="secondary" className="px-4 py-2 md:px-6 md:py-3 text-sm md:text-lg">
                 Trusted Partnerships
               </Badge>
             </div>
