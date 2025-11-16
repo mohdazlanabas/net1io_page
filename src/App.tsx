@@ -31,7 +31,8 @@ export default function App() {
   ];
 
   const credentials = [
-    "Cambridge University Engineering & Business Graduates",
+    "Cambridge University Engineering Graduates",
+    "Stanford Graduate Business School",
     "Western Michigan University Alumni",
     "Macquarie University Distinguished Alumni",
     "25+ Years Average Team Experience",
@@ -42,10 +43,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
-      <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <ImageWithFallback 
-            src="https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763008918/net1io_logo_f245yi.png"
+          <ImageWithFallback
+            src="https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763303108/logo_smwk61.png"
             alt="Net1io team"
             className="w-full h-full object-cover"
           />
@@ -53,7 +54,7 @@ export default function App() {
         </div>
         
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
-          <div className="mb-6 md:mb-8">
+          <div className="mb-6 md:mb-8 pt-6 md:pt-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight">
               Net<span className="text-accent">1</span>io
             </h1>
@@ -74,18 +75,21 @@ export default function App() {
             </p>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-gray-100 px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg w-full sm:w-auto">
-              <Mail className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-              <span className="truncate">azlan@net1io.com</span>
-            </Button>
-            <Button size="lg" className="bg-white text-primary px-6 md:px-8 py-3 md:py-4 text-sm md:text-lg w-full sm:w-auto">
-              <Phone className="mr-2 h-4 md:h-5 w-4 md:w-5" />
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="mailto:azlan@net1io.com" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-8 py-4 rounded-lg transition-all duration-300 flex items-center gap-2 font-medium">
+              <Mail className="h-5 w-5" />
+              azlan@net1io.com
+            </a>
+            <a href="tel:+628176917122" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-8 py-4 rounded-lg transition-all duration-300 flex items-center gap-2 font-medium">
+              <Phone className="h-5 w-5" />
               +62 817 691 7122
-            </Button>
+            </a>
           </div>
         </div>
       </section>
+
+      {/* Spacer */}
+      <div className="h-6 md:h-10 bg-background"></div>
 
       {/* About Section */}
       <section className="py-12 md:py-20 bg-muted/30">
@@ -183,24 +187,30 @@ export default function App() {
             ))}
           </div>
 
-          <div className="relative rounded-2xl overflow-hidden">
-            <ImageWithFallback
-              src="https://images.unsplash.com/photo-1758448182583-8871f8eb43c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMGluZHVzdHJpYWwlMjBwcm9qZWN0fGVufDF8fHx8MTc1ODY0NTA2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="Engineering industrial project"
-              className="w-full h-48 md:h-64 object-cover"
-            />
-            <div className="absolute inset-0 bg-primary/70 flex items-center justify-center">
-              <div className="text-center text-white max-w-4xl px-4 md:px-6">
+          <Card className="relative overflow-hidden border-2">
+            <div className="absolute inset-0">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1758448182583-8871f8eb43c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbmdpbmVlcmluZyUyMGluZHVzdHJpYWwlMjBwcm9qZWN0fGVufDF8fHx8MTc1ODY0NTA2Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="Engineering industrial project"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-primary/75"></div>
+            </div>
+            <CardContent className="relative py-8 md:py-12">
+              <div className="text-center text-white">
                 <h3 className="text-lg md:text-2xl font-bold mb-3 md:mb-4">Engineering Excellence Meets Strategic Vision</h3>
-                <p className="text-sm md:text-lg opacity-90">
+                <p className="text-sm md:text-base opacity-95 max-w-3xl mx-auto">
                   From LEED certification and energy efficiency auditing to M&A integration and
                   leadership development, we deliver measurable results across every engagement.
                 </p>
               </div>
-            </div>
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
+
+      {/* Spacer */}
+      <div className="h-6 md:h-10 bg-background"></div>
 
       {/* Team Credentials & Sectors */}
       <section className="py-12 md:py-20 bg-muted/30">
@@ -224,7 +234,7 @@ export default function App() {
               
               <div className="space-y-3 md:space-y-4">
                 {credentials.map((credential, index) => (
-                  <div key={index} className="flex items-center gap-3 md:gap-4 p-3 md:p-4 bg-white rounded-lg border">
+                  <div key={index} className="flex items-center gap-3 md:gap-4 px-3 md:px-4 py-4 md:py-5 bg-white rounded-lg border">
                     <Award className="h-5 md:h-6 w-5 md:w-6 text-primary flex-shrink-0" />
                     <span className="font-medium text-sm md:text-base">{credential}</span>
                   </div>
@@ -257,7 +267,7 @@ export default function App() {
                 ))}
               </div>
 
-              <Card className="p-5 md:p-6 bg-primary text-white">
+              <Card className="p-8 md:p-10 bg-primary text-white">
                 <div className="text-center">
                   <MapPin className="h-6 md:h-8 w-6 md:w-8 mx-auto mb-2 md:mb-3" />
                   <h4 className="font-bold mb-2 text-base md:text-lg">South East Asia Focus</h4>
@@ -271,6 +281,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Spacer */}
+      <div className="h-6 md:h-10 bg-background"></div>
 
       {/* Client Logos */}
       <section className="py-12 md:py-20">
@@ -288,7 +301,7 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-6">
+          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {[
               { name: 'Petronas', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/petronas_paundo.jpg' },
               { name: 'Gas Malaysia', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/gasm_qapzj0.png' },
@@ -309,20 +322,19 @@ export default function App() {
               { name: 'Greenviro', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/green_gi6whw.png' },
               { name: 'Shell', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/shell_jjtkcv.jpg' },
             ].map((client, index) => (
-              <div
-                key={index}
-                className="group relative flex items-center justify-center p-3 md:p-5 bg-white rounded-lg border hover:border-primary transition-all duration-300 hover:shadow-md h-20 md:h-28 lg:h-32"
-              >
-                <ImageWithFallback
-                  src={client.url}
-                  alt={`${client.name} logo`}
-                  className="w-full h-full object-contain grayscale hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-300"
-                />
-              </div>
+              <Card key={index} className="border-2 hover:shadow-lg transition-shadow p-0">
+                <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center">
+                  <ImageWithFallback
+                    src={client.url}
+                    alt={`${client.name} logo`}
+                    className="w-full h-full object-contain grayscale opacity-60"
+                  />
+                </div>
+              </Card>
             ))}
           </div>
 
-          <div className="mt-8 md:mt-12 text-center">
+          <div className="mt-8 md:mt-12 mb-6 md:mb-8 text-center">
             <p className="text-base md:text-lg text-muted-foreground">
               <br />
               Building lasting relationships through exceptional delivery and measurable results
@@ -330,6 +342,9 @@ export default function App() {
           </div>
         </div>
       </section>
+
+      {/* Spacer */}
+      <div className="h-16 md:h-24 bg-background"></div>
 
       {/* Global Reach */}
       <section className="py-12 md:py-20 relative overflow-hidden">
@@ -343,7 +358,7 @@ export default function App() {
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center text-white">
-          <h2 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8">Global Standards, Regional Excellence</h2>
+          <h2 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8 pt-6 md:pt-8">Global Standards, Regional Excellence</h2>
           <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
             <div className="p-4 md:p-6">
               <div className="text-3xl md:text-4xl font-bold mb-2 md:mb-4">25+</div>
@@ -369,6 +384,7 @@ export default function App() {
       {/* Contact Section */}
       <section className="py-12 md:py-20 bg-primary text-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
+          <Separator className="mb-8 md:mb-12 bg-white/30" />
           <h2 className="text-2xl md:text-4xl font-bold mb-6 md:mb-8">Transform Your Organization Today</h2>
           <p className="text-base md:text-xl mb-8 md:mb-12 opacity-90 leading-relaxed">
             Partner with Net1io for comprehensive organizational transformation.
@@ -377,41 +393,28 @@ export default function App() {
           </p>
 
           <Card className="bg-white text-primary p-6 md:p-8 max-w-2xl mx-auto">
-            <div className="space-y-4 md:space-y-6">
-              <div className="text-center">
-                <h3 className="text-xl md:text-2xl font-bold mb-2">Azlan Abas</h3>
-                <p className="text-base md:text-lg text-muted-foreground mb-4 md:mb-6">Principal Consultant</p>
-              </div>
-
-              <Separator />
-
-              <div className="space-y-3 md:space-y-4">
-                <Button
-                  size="lg"
-                  className="w-full bg-primary hover:bg-primary/90 text-white text-sm md:text-base py-3 md:py-4"
-                  onClick={() => window.location.href = 'mailto:azlan@net1io.com'}
-                >
-                  <Mail className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-                  <span className="truncate">azlan@net1io.com</span>
-                  <ArrowRight className="ml-2 h-3 md:h-4 w-3 md:w-4" />
-                </Button>
-
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-white text-sm md:text-base py-3 md:py-4"
-                  onClick={() => window.location.href = 'tel:+628176917122'}
-                >
-                  <Phone className="mr-2 h-4 md:h-5 w-4 md:w-5" />
-                  +62 817 691 7122
-                  <ArrowRight className="ml-2 h-3 md:h-4 w-3 md:w-4" />
-                </Button>
-              </div>
-
-              <div className="text-center text-xs md:text-sm text-muted-foreground pt-2 md:pt-4">
-                Serving Fortune 500 companies and SMEs across South East Asia
-              </div>
+            <div className="text-center mb-6">
+              <h3 className="text-xl md:text-2xl font-bold mb-2">Azlan Abas</h3>
+              <p className="text-base md:text-lg text-muted-foreground">Principal Consultant</p>
             </div>
+
+            <Separator className="mb-6" />
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <a href="mailto:azlan@net1io.com" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium">
+                <Mail className="h-5 w-5" />
+                azlan@net1io.com
+              </a>
+
+              <a href="tel:+628176917122" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium">
+                <Phone className="h-5 w-5" />
+                +62 817 691 7122
+              </a>
+            </div>
+
+            <p className="text-center text-xs md:text-sm text-muted-foreground mt-6">
+              Serving Fortune 500 companies and Small Medium Enterprises (SMEs) across South East Asia
+            </p>
           </Card>
         </div>
       </section>
