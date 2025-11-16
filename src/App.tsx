@@ -74,17 +74,6 @@ export default function App() {
               through engineering excellence, strategic leadership, and operational transformation, that is bold yet achievable for our clients.
             </p>
           </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a href="mailto:azlan@net1io.com" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-8 py-4 rounded-lg transition-all duration-300 flex items-center gap-2 font-medium">
-              <Mail className="h-5 w-5" />
-              azlan@net1io.com
-            </a>
-            <a href="tel:+628176917122" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-8 py-4 rounded-lg transition-all duration-300 flex items-center gap-2 font-medium">
-              <Phone className="h-5 w-5" />
-              +62 817 691 7122
-            </a>
-          </div>
         </div>
       </section>
 
@@ -401,12 +390,20 @@ export default function App() {
             <Separator className="mb-6" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <a href="mailto:azlan@net1io.com" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium">
+              <a
+                href="mailto:azlan@net1io.com"
+                style={{ backgroundColor: '#000000', color: '#ffffff' }}
+                className="hover:bg-white hover:text-black border-2 border-black px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium"
+              >
                 <Mail className="h-5 w-5" />
                 azlan@net1io.com
               </a>
 
-              <a href="tel:+628176917122" className="bg-black text-white hover:bg-white hover:text-black border-2 border-black px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium">
+              <a
+                href="tel:+628176917122"
+                style={{ backgroundColor: '#000000', color: '#ffffff' }}
+                className="hover:bg-white hover:text-black border-2 border-black px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 font-medium"
+              >
                 <Phone className="h-5 w-5" />
                 +62 817 691 7122
               </a>
