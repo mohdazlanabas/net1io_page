@@ -31,7 +31,7 @@ export default function App() {
   ];
 
   const credentials = [
-    "Cambridge University Engineering Graduates",
+    "Cambridge University Engineering Graduate",
     "Stanford Graduate Business School",
     "Western Michigan University Alumni",
     "Macquarie University Distinguished Alumni",
@@ -290,29 +290,34 @@ export default function App() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div style={{
+  display: 'grid',
+  gridTemplateColumns: 'repeat(auto-fit, minmax(90px, 180px))',
+  gap: '1rem',
+  justifyContent: 'center'
+}}>
             {[
-              { name: 'Petronas', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/petronas_paundo.jpg' },
+              { name: 'Petronas', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763373070/petronas_imwip9.png' },
               { name: 'Gas Malaysia', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/gasm_qapzj0.png' },
-              { name: 'Bechtel', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/bechtel_kiwav3.png' },
+              { name: 'KOC', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/koc_ytghs4.jpg' },
               { name: 'GE', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/ge_reh0iw.png' },
-              { name: 'Eaton', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/eaton_rhykj9.png' },
               { name: 'Proton', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/proton_wrahdf.png' },
+              { name: 'Telkomsel', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/telkomsel_opry4g.jpg' },
+              { name: 'Bechtel', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/bechtel_kiwav3.png' },
+              { name: 'Operon', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/operon_lxj6cv.jpg' },
+               { name: 'Shell', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/shell_jjtkcv.jpg' },
+              { name: 'Eaton', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/eaton_rhykj9.png' },
               { name: '3M', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276077/threem_iw1pce.png' },
               { name: 'AmBank', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/ambank_mp6dpf.png' },
-              { name: 'Telkomsel', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/telkomsel_opry4g.jpg' },
               { name: 'UEM Group', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/uemg_ofsoe4.png' },
-              { name: 'Transwater', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276077/transwater_wjaqtf.png' },
-              { name: 'KOC', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/koc_ytghs4.jpg' },
-              { name: 'Operon', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/operon_lxj6cv.jpg' },
+              { name: 'Transwater', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276077/transwater_wjaqtf.png' },    
               { name: 'Iskandar', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/iskandar_a8vk5t.jpg' },
               { name: 'MPC', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/mpc_ok6gfa.png' },
               { name: 'LSI', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/lsi_pdttka.png' },
               { name: 'Greenviro', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276076/green_gi6whw.png' },
-              { name: 'Shell', url: 'https://res.cloudinary.com/dpp2n0jkk/image/upload/v1763276075/shell_jjtkcv.jpg' },
             ].map((client, index) => (
-              <Card key={index} className="border-2 hover:shadow-lg transition-shadow p-0">
-                <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center">
+              <Card key={index} className="border-0 hover:shadow-lg transition-shadow p-0">
+                <div className="w-full aspect-square bg-white rounded-lg flex items-center justify-center p-[0.1rem]">
                   <ImageWithFallback
                     src={client.url}
                     alt={`${client.name} logo`}
